@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <title>Project WebAR</title>	
+     <link rel="stylesheet" href="css/style.css">
+     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/ar.js/2.1.1/aframe-ar.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+     <script src="js/gesture.js"></script>
+     <script src="js/script.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+     <link rel="stylesheet" href="css/particles.css">
+     </head>
+     <script>
+          AFRAME.registerComponent('registerevents', {
+		init: function () {
+			var marker = this.el;
+
+			marker.addEventListener('markerFound', function() {
+				var markerId = marker.id;
+				console.log('markerFound', markerId);
+			 if(markerId == "fifamarker")
+			 {
+				document.getElementById("buy1").style.display = "block";
+                                document.getElementById("buy1-1").style.display = "block";
+
+				document.getElementById("buy2").style.display = "none";
+				document.getElementById("buy3").style.display = "none";
+			 }
+			if(markerId == "reebokmarker")
+			 {
+				document.getElementById("buy1").style.display = "none";
+				document.getElementById("buy2").style.display = "block";
+                                document.getElementById("buy2-1").style.display = "block";
+
+				document.getElementById("buy3").style.display = "none";
+			 }
+			if(markerId == "iphonemarker")
+			 {
+				document.getElementById("buy1").style.display = "none";
+				document.getElementById("buy2").style.display = "none";
+				document.getElementById("buy3").style.display = "block";
+			 }
+                    
+  			 document.querySelector('#football-animation').emit('footballRotate');
+//                       document.querySelector('#football-animation').emit('footballAnimation');
+
+  			 document.querySelector('#reebok-animation').emit('reebokRotate');	
+// 			 document.querySelector('#reebok-animation').emit('reebokAnimation');
+				
+                     	 document.querySelector('#iphone-animation').emit('iphoneRotate');
+// 			 document.querySelector('#iphone-animation').emit('iphoneAnimation');
+ 
+			 document.querySelector('#text-animation1').emit('textAnimation1');	
+			 document.querySelector('#text-animation2').emit('textAnimation2');
+			 document.querySelector('#text-animation3').emit('textAnimation3');
+                    		
+				
+			});
+			
+			
+		
+
+			marker.addEventListener('markerLost', function() {
+				var markerId = marker.id;
+				console.log('markerLost', markerId);
+				document.getElementById("buy1").style.display = "none";
+                                document.getElementById("buy1-1").style.display = "none";
+				document.getElementById("buy2").style.display = "none";
+                                document.getElementById("buy2-1").style.display = "none";
+				document.getElementById("buy3").style.display = "none";
+				
+			});
+		}
+	});
+			
+	
+     </script>
+  <body>
+       
+    <div id="splash">
+         <div class="loading"></div>
+    </div>
+	  
+    <div id="buy1"> <button id="ARworld1" onclick="window.open('pay.html#reebok')">Purchase T-Shirt</button></div>
+    <div id="buy1-1"> <button id="ARworld1-1" onclick="window.open('pay.html#sneakers')">Purchase Hoodie</button></div>
+
+    <div id="buy2"> <button id="ARworld2" onclick="window.open('pay.html#sneakers')">Purchase Hoodie</button></div>
+    <div id="buy2-1"> <button id="ARworld2-1" onclick="window.open('pay.html#reebok')">Purchase T-Shirt</button></div>
+
+    <div id="buy3"> <button id="ARworld3" onclick="window.open('pay.html#iphone')">Purchase iPhone</button></div>
+
+	  
+    <div id="landing">
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <div class="firefly"></div>
+      <img id="oneimg" src="Images%20and%20QR%20codes/design.png" alt="" height="100px">
+      <img id="twoimg" src="Images%20and%20QR%20codes/design.png" alt="" height="100px">
+      <img id="threeimg" src="Images%20and%20QR%20codes/design.png" alt="" height="100px">
+      <img id="fourimg" src="Images%20and%20QR%20codes/design.png" alt="" height="100px">
+      <h1>Expect the Unreal <br><span>with WebAR</span></h1>
+        <p>"Using WebAR, we bring you point-of-sale information with geospatial or visual triggers in the environment, so jump in and look for markers around to initiate the whole new experience of limitless possibilities."</p>
+	<p class="laptop">Built using AR.js, we aim at developing an Augmented Reality Experience  where collection of technologies used to blend computer generated information with the viewer’s natural senses.</p>
+        <p class="laptop">We proudly welcome you to our AR mall where we blurred the lines of reality and create a unique WebAR shopping experience to our users on the scan of a QR code and let us guide you through guide you through the whole workflow from advertising to purchasing.</p>
+        <button id="ARworld" onclick="document.body.removeChild(this.parentNode)">Enter the AR world</button>
+    </div>  
+	  	  
+    <a-scene arjs="debugUIEnabled: false; patternRatio:0.75" embedded renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false" gesture-detector loading-screen="dotsColor: white; backgroundColor: black" renderer="gammaOutput: true" id="scene">
+         
+         <a-assets>
+              <a-asset-item id="football" src=squid_game_/scene.gltf></a-asset-item>
+	      <a-asset-item id="projector" src=3d_projector/scene.gltf></a-asset-item>
+         </a-assets>
+
+       <a-marker id="fifamarker" preset='custom1' type='pattern' url='image-targets/squid_game_marker.patt' emitevents='true' registerevents>
+               <a-entity id="football-animation" position="0 -3 0"  class="clickable" gesture-handler="minScale: 0.25; maxScale: 10" gltf-model="#football"
+			  animation__rotation="property: rotation; startEvents: footballRotate; to: 0 360 0; dur: 5000; easing: easeInOutQuint"
+			  animation__y-axis="property: position; begin: footballAnimation; from: 0 -5 0; to: 0 0 0; dur: 5000; easing: easeInOutQuint">
+               </a-entity>
+               <a-entity gltf-model="#projector" position="0 -2.7 -1" scale="0.1 0.1 0.1" animation-mixer></a-entity>
+               <a-text id="text-animation1" value="squid game" font="css/fonts/audiowide/Audiowide-Regular.json" shader="msdf" color="white" rotation="0 0 0" position="0 -1.5 -0.6" align="center" scale="1.8 1.8 1.8" zOffset="5" text 
+		       	  animation__y-axis="property: position; startEvents: textAnimation1; from: 0 5 -0.6; to: 0 -1.5 -0.6; dur: 5000; easing: easeInOutQuint">
+               </a-text>
+	 
+       </a-marker>
+         
+
+       <a-assets>
+                <a-asset-item id="reebok" src=black_panther/scene.gltf></a-asset-item>
+       </a-assets>
+
+       <a-marker id="reebokmarker" preset='custom2' type='pattern' url='image-targets/black_panther.patt' emitevents='true' registerevents> 
+               <a-entity id="reebok-animation" position="0 -2.5 -2.5" scale="1 1 1" class="clickable"  animation-mixer gesture-handler="minScale: 0.25; maxScale: 10" gltf-model="#reebok"
+			  animation__rotation="property: rotation; startEvents: reebokRotate; to: 0 360 0; dur: 5000; easing: easeInOutQuint"
+			  animation__y-axis="property: position; begin: reebokAnimation; from: 0 -5 0; to: 0 -0.4 0; dur: 5000; easing: easeInOutQuint" >
+	       </a-entity>
+               <a-entity gltf-model="#projector" position="0 -3 -1" scale="0.1 0.1 0.1" animation-mixer></a-entity>
+               <a-text id="text-animation2" value="panther" font="css/fonts/audiowide/Audiowide-Regular.json" shader="msdf" color="white" rotation="0 0 0" position="0 -1.5 -0.6" align="center" scale="1.8 1.8 1.8" zOffset="5" text 
+		       	  animation__y-axis="property: position; startEvents: textAnimation2; from: 0 5 -0.6; to: 0 -1.5 -0.6; dur: 5000; easing: easeInOutQuint">
+               </a-text>
+       </a-marker>  
+     
+         
+       <a-assets>
+               <a-asset-item id="iphone" src=iphone_13/scene.gltf></a-asset-item>
+       </a-assets>
+            
+       <a-marker id="iphonemarker" preset='custom3' type='pattern' url='image-targets/iphone.patt' emitevents='true' registerevents> 
+               <a-entity rotation="0 90 0"><a-entity id="iphone-animation" position="0.1 0 0" scale="1 1 1" class="clickable" gesture-handler="minScale: 0.25; maxScale: 10" gltf-model="#iphone"
+			  animation__rotation="property: rotation; startEvents: iphoneRotate; to: 0 360 0; dur: 5000; easing: easeInOutQuint"
+			  animation__y-axis="property: position; begin: iphoneAnimation; from: 0.1 -5 0; to: 0.1 0 0; dur: 5000; easing: easeInOutQuint" >
+               </a-entity></a-entity>
+               <a-entity gltf-model="#projector" position="0 -3 -1" scale="0.1 0.1 0.1" animation-mixer></a-entity>
+               <a-text id="text-animation3" value="apple" font="css/fonts/audiowide/Audiowide-Regular.json" shader="msdf" color="white" rotation="0 0 0" position="0 -1.9 -0.6" align="center" scale="1.8 1.8 1.8" zOffset="5" text
+		          animation__y-axis="property: position; startEvents: textAnimation3; from: 0 5 -0.6; to: 0 -1.9 -0.6; dur: 5000; easing: easeInOutQuint">
+               </a-text>
+       </a-marker>
+             
+      
+  
+	<a-entity camera></a-entity> 
+    </a-scene>
+  </body>
+</html>

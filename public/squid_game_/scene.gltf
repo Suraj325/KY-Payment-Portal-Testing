@@ -1,0 +1,439 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 6465,
+      "max": [
+        0.6502211689949036,
+        0.8469233512878418,
+        0.26465392112731934
+      ],
+      "min": [
+        -0.6542941331863403,
+        -1.0338695049285889,
+        -0.1726784110069275
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 77580,
+      "componentType": 5126,
+      "count": 6465,
+      "max": [
+        0.9999834299087524,
+        0.9998480081558228,
+        0.999998927116394
+      ],
+      "min": [
+        -0.9998995065689087,
+        -1.0,
+        -0.9999891519546509
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 6465,
+      "max": [
+        0.9677730798721313,
+        0.9121596813201904
+      ],
+      "min": [
+        0.4041445851325989,
+        0.09814150631427765
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 34734,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 155160,
+      "componentType": 5126,
+      "count": 843,
+      "max": [
+        0.1362616866827011,
+        0.1848592758178711,
+        0.13254845142364502
+      ],
+      "min": [
+        -0.13707099854946136,
+        -0.1824098825454712,
+        -0.15381070971488953
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 165276,
+      "componentType": 5126,
+      "count": 843,
+      "max": [
+        0.9979108572006226,
+        0.9997776746749878,
+        0.9939987659454346
+      ],
+      "min": [
+        -0.9978757500648499,
+        -1.0,
+        -0.9896765351295471
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 51720,
+      "componentType": 5126,
+      "count": 843,
+      "max": [
+        0.4119822382926941,
+        0.9110584259033203
+      ],
+      "min": [
+        0.14639067649841309,
+        0.9027965068817139
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 138936,
+      "componentType": 5125,
+      "count": 4086,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 175392,
+      "componentType": 5126,
+      "count": 64,
+      "max": [
+        0.06333211064338684,
+        0.05910801887512207,
+        0.02450355887413025
+      ],
+      "min": [
+        -0.060400158166885376,
+        -0.05813717842102051,
+        -0.02732190489768982
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 176160,
+      "componentType": 5126,
+      "count": 64,
+      "max": [
+        0.8763597011566162,
+        0.9014043807983398,
+        0.9984238743782043
+      ],
+      "min": [
+        -0.8704282641410828,
+        -0.9281049370765686,
+        -0.9061230421066284
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 58464,
+      "componentType": 5126,
+      "count": 64,
+      "max": [
+        0.044187307357788086,
+        0.9713454246520996
+      ],
+      "min": [
+        0.04410281777381897,
+        0.9711758494377136
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 155280,
+      "componentType": 5125,
+      "count": 384,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "businessyuen (https://sketchfab.com/businessyuen)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/squid-game-soldier-7f1876fb391840519c9415c4c6ea081c",
+      "title": "Squid Game Soldier"
+    },
+    "generator": "Sketchfab-11.79.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 156816,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 58976,
+      "byteOffset": 156816,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 176928,
+      "byteOffset": 215792,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 392720,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Material_baseColor.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Material",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8211145618000169
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Body_Material_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Head_Material_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Square_Material_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "SquidGameSoldierfbx.fbx"
+    },
+    {
+      "children": [
+        3,
+        5,
+        7
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.004358653444796801,
+        1.0303572416305542,
+        -0.004937781486660242,
+        1.0
+      ],
+      "name": "Body"
+    },
+    {
+      "mesh": 0,
+      "name": "Body_Material_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0004751071974169463,
+        1.6707499027252197,
+        0.01119461189955473,
+        1.0
+      ],
+      "name": "Head"
+    },
+    {
+      "mesh": 1,
+      "name": "Head_Material_0"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0020123885478824377,
+        1.7414476871490479,
+        0.11857400834560394,
+        1.0
+      ],
+      "name": "Square"
+    },
+    {
+      "mesh": 2,
+      "name": "Square_Material_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
