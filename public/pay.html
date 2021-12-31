@@ -10,6 +10,7 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="./css/particles.css" />
     <title>WebAR | Paytm-Nodejs</title>
   </head>
@@ -113,6 +114,36 @@
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, 0.18);
       }
+      .form-control:hover {
+        box-shadow: none;
+      }
+
+      /* for quantity */
+      .quantity {
+        display: flex;
+        justify-content: center;
+      }
+
+      .quantity button {
+        width: 50px;
+        height: 50px;
+        color: #000;
+        border-radius: 0px;
+        background: #e9ecef;
+      }
+      .quantity button:hover {
+        color: white;
+        box-shadow: none;
+      }
+
+      .quantity input {
+        border-radius: 0;
+        text-align: center;
+        font-size: 20px;
+        color: #000;
+        background: #e9ecef;
+        font-weight: 300;
+      }
     </style>
 
     <section>
@@ -157,10 +188,26 @@
                   <input
                     class="form-control"
                     type="text"
+                    id="price"
                     name="amount"
                     value="15"
                     readonly
                   />
+                </div>
+                <div class="form-group">
+                  <label for="">Quantity</label>
+                  <div class="quantity">
+                    <button class="btn minus-btn disabled" type="button">
+                      -
+                    </button>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="quantity"
+                      value="1"
+                    />
+                    <button class="btn plus-btn" type="button">+</button>
+                  </div>
                 </div>
                 <div class="form-group">
                   <button class="btn form-control btn-primary" name="button">
@@ -211,10 +258,26 @@
                   <input
                     class="form-control"
                     type="text"
+                    id="price"
                     name="amount"
                     value="1800"
                     readonly
                   />
+                </div>
+                <div class="form-group">
+                  <label for="">Quantity</label>
+                  <div class="quantity">
+                    <button class="btn minus-btn disabled" type="button">
+                      -
+                    </button>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="quantity"
+                      value="1"
+                    />
+                    <button class="btn plus-btn" type="button">+</button>
+                  </div>
                 </div>
                 <div class="form-group">
                   <button class="btn form-control btn-primary" name="button">
@@ -260,15 +323,32 @@
                     value=""
                   />
                 </div>
+
                 <div class="form-group">
                   <label for="">Amount: </label>
                   <input
                     class="form-control"
-                    type="text"
+                    type="number"
+                    id="price"
                     name="amount"
                     value="2000"
                     readonly
                   />
+                </div>
+                <div class="form-group">
+                  <label for="">Quantity</label>
+                  <div class="quantity">
+                    <button class="btn minus-btn disabled" type="button">
+                      -
+                    </button>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="quantity"
+                      value="1"
+                    />
+                    <button class="btn plus-btn" type="button">+</button>
+                  </div>
                 </div>
                 <div class="form-group">
                   <button class="btn form-control btn-primary" name="button">
@@ -281,6 +361,8 @@
         </div>
       </div>
     </section>
+    <script src="js/script.js"></script>
+
     <script type="text/javascript">
       var url = document.URL;
       var id = url.substring(url.lastIndexOf("/") + 1);
