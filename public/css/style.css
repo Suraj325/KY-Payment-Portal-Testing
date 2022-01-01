@@ -116,25 +116,25 @@ button#ARworld3:hover {
   display: none;
 }
 button#ARworld1 {
-  left: 30vw;
+  left: 25vw;
   top: 90vh;
   transform: translate(-50%, -50%);
   position: absolute;
 }
 button#ARworld1-1 {
-  left: 70vw;
+  left: 75vw;
   top: 90vh;
   transform: translate(-50%, -50%);
   position: absolute;
 }
 button#ARworld2 {
-  left: 20vw;
+  left: 25vw;
   top: 90vh;
   transform: translate(-50%, -50%);
   position: absolute;
 }
 button#ARworld2-1 {
-  left: 80vw;
+  left: 75vw;
   top: 90vh;
   transform: translate(-50%, -50%);
   position: absolute;
