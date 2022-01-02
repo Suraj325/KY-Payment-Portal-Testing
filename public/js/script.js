@@ -13,7 +13,7 @@ function priceTotal() {
   var total = valueCount * price;
   document.getElementById("price").value = total;
 }
-document.querySelector(".plus-btn").addEventListener("click", function () {
+function plus() {
   valueCount = document.getElementById("quantity").value;
   valueCount++;
   document.getElementById("quantity").value = valueCount;
@@ -22,8 +22,8 @@ document.querySelector(".plus-btn").addEventListener("click", function () {
     document.querySelector(".minus-btn").classList.remove("disabled");
   }
   priceTotal();
-});
-document.querySelector(".minus-btn").addEventListener("click", function () {
+}
+function minus() {
   valueCount = document.getElementById("quantity").value;
   valueCount--;
   document.getElementById("quantity").value = valueCount;
@@ -31,4 +31,4 @@ document.querySelector(".minus-btn").addEventListener("click", function () {
     document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
   }
   priceTotal();
-});
+}
