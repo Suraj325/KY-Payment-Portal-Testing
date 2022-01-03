@@ -64,13 +64,23 @@
 			marker.addEventListener('markerLost', function() {
 				var markerId = marker.id;
 				console.log('markerLost', markerId);
-                                setTimeout(function(){ document.getElementById("buy1").style.display = "none";
-                                document.getElementById("buy1-1").style.display = "none";
-				document.getElementById("buy2").style.display = "none";
-                                document.getElementById("buy2-1").style.display = "none";
-				document.getElementById("buy3").style.display = "none"; }, 2000);
-				
-				
+                                if(markerId =='fifamarker'){
+                                        setTimeout(function(){
+                                                document.getElementById("buy1").style.display = "none";
+                                                document.getElementById("buy1-1").style.display = "none";},2000)
+                                }
+                                if(markerId=='reebokmarker'){
+                                        setTimeout(function(){
+                                                document.getElementById("buy2").style.display = "none";
+                                                document.getElementById("buy2-1").style.display = "none";
+                                        },2000)
+                                }
+                                if(markerId=='iphonemarker'){
+                                        setTimeout(function(){
+                                                document.getElementById("buy3").style.display = "none";
+                                        },2000)
+                                }
+                               
 			});
 		}
 	});

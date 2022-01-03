@@ -8,10 +8,23 @@ var z = document.getElementsByClassName("minus-btn")[2];
 z.setAttribute("disabled", "disabled");
 
 var valueCount;
-var price = document.getElementById("price").value;
-function priceTotal() {
-  var total = valueCount * price;
-  document.getElementById("price").value = total;
+var price1 = document.getElementById("price1").value;
+var price2 = document.getElementById("price2").value;
+var price3 = document.getElementById("price3").value;
+
+function priceTotal1() {
+  var total = valueCount * price1;
+  document.getElementById("price1").value = total;
+}
+
+function priceTotal2() {
+  var total = valueCount * price2;
+  document.getElementById("price2").value = total;
+}
+
+function priceTotal3() {
+  var total = valueCount * price3;
+  document.getElementById("price3").value = total;
 }
 function plus() {
   valueCount = document.getElementById("quantity1").value;
@@ -21,7 +34,7 @@ function plus() {
     x.removeAttribute("disabled");
     x.classList.remove("disabled");
   }
-  priceTotal();
+  priceTotal1();
 }
 function minus() {
   valueCount = document.getElementById("quantity1").value;
@@ -30,7 +43,7 @@ function minus() {
   if (valueCount == 1) {
     x.setAttribute("disabled", "disabled");
   }
-  priceTotal();
+  priceTotal1();
 }
 
 function plus1() {
@@ -41,7 +54,7 @@ function plus1() {
     y.removeAttribute("disabled");
     y.classList.remove("disabled");
   }
-  priceTotal();
+  priceTotal2();
 }
 function minus1() {
   valueCount = document.getElementById("quantity2").value;
@@ -50,7 +63,7 @@ function minus1() {
   if (valueCount == 1) {
     y.setAttribute("disabled", "disabled");
   }
-  priceTotal();
+  priceTotal2();
 }
 function plus2() {
   valueCount = document.getElementById("quantity3").value;
@@ -60,7 +73,7 @@ function plus2() {
     z.removeAttribute("disabled");
     z.classList.remove("disabled");
   }
-  priceTotal();
+  priceTotal3();
 }
 function minus2() {
   valueCount = document.getElementById("quantity3").value;
@@ -69,5 +82,5 @@ function minus2() {
   if (valueCount == 1) {
     z.setAttribute("disabled", "disabled");
   }
-  priceTotal();
+  priceTotal3();
 }
