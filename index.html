@@ -64,11 +64,12 @@
 			marker.addEventListener('markerLost', function() {
 				var markerId = marker.id;
 				console.log('markerLost', markerId);
-				document.getElementById("buy1").style.display = "none";
+                                setTimeout(function(){ document.getElementById("buy1").style.display = "none";
                                 document.getElementById("buy1-1").style.display = "none";
 				document.getElementById("buy2").style.display = "none";
                                 document.getElementById("buy2-1").style.display = "none";
-				document.getElementById("buy3").style.display = "none";
+				document.getElementById("buy3").style.display = "none"; }, 2000);
+				
 				
 			});
 		}
