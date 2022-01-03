@@ -5,32 +5,35 @@ document.addEventListener("DOMContentLoaded", function () {
     splash.style.display = "none";
   });
 });
-
-document.querySelectorAll(".minus-btn").setAttribute("disabled", "disabled");
-var valueCount;
-var price = document.getElementById("price").value;
-function priceTotal() {
-  var total = valueCount * price;
-  document.getElementById("price").value = total;
-}
-function plus() {
-  valueCount = document.getElementById("quantity").value;
-  valueCount++;
-  document.getElementById("quantity").value = valueCount;
-  if (valueCount > 1) {
-    document.querySelectorAll(".minus-btn").removeAttribute("disabled");
-    document.querySelectorAll(".minus-btn").classList.remove("disabled");
+var x = document.getElementsByClassName("minus-btn");
+for (var i = 0, len = x.length; i < len; i++) {
+  // elements[i].style ...
+  x[i].setAttribute("disabled", "disabled");
+  var valueCount;
+  var price = document.getElementById("price").value;
+  function priceTotal() {
+    var total = valueCount * price;
+    document.getElementById("price").value = total;
   }
-  priceTotal();
-}
-function minus() {
-  valueCount = document.getElementById("quantity").value;
-  valueCount--;
-  document.getElementById("quantity").value = valueCount;
-  if (valueCount == 1) {
-    document
-      .querySelectorAll(".minus-btn")
-      .setAttribute("disabled", "disabled");
+  function plus() {
+    valueCount = document.getElementById("quantity").value;
+    valueCount++;
+    document.getElementById("quantity").value = valueCount;
+    if (valueCount > 1) {
+      x[i].removeAttribute("disabled");
+      x[i].classList.remove("disabled");
+    }
+    priceTotal();
   }
-  priceTotal();
+  function minus() {
+    valueCount = document.getElementById("quantity").value;
+    valueCount--;
+    document.getElementById("quantity").value = valueCount;
+    if (valueCount == 1) {
+      document
+        .querySelectorAll(".minus-btn")
+        .setAttribute("disabled", "disabled");
+    }
+    priceTotal();
+  }
 }
