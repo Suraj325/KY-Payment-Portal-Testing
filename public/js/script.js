@@ -21,7 +21,6 @@ for (var i = 0, len = x.length; i < len; i++) {
     valueCount++;
     document.getElementById("quantity").value = valueCount;
     if (valueCount > 1) {
-      x[i].removeAttribute("disabled");
       x[i].classList.remove("disabled");
     }
     priceTotal();
