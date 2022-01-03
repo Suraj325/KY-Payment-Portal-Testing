@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 var x = document.getElementsByClassName("minus-btn");
 for (var i = 0, len = x.length; i < len; i++) {
   // elements[i].style ...
+  console.log(x.length);
   x[i].setAttribute("disabled", "disabled");
   var valueCount;
   var price = document.getElementById("price").value;
