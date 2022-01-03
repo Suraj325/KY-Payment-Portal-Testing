@@ -1,11 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var scene = document.querySelector("a-scene");
-  var splash = document.querySelector("#splash");
-  scene.addEventListener("loaded", function (e) {
-    splash.style.display = "none";
-  });
-});
-
 document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
 var valueCount;
 var price = document.getElementById("price").value;
