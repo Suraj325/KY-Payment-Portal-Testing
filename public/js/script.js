@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+document.querySelectorAll(".minus-btn").setAttribute("disabled", "disabled");
 var valueCount;
 var price = document.getElementById("price").value;
 function priceTotal() {
@@ -18,8 +18,8 @@ function plus() {
   valueCount++;
   document.getElementById("quantity").value = valueCount;
   if (valueCount > 1) {
-    document.querySelector(".minus-btn").removeAttribute("disabled");
-    document.querySelector(".minus-btn").classList.remove("disabled");
+    document.querySelectorAll(".minus-btn").removeAttribute("disabled");
+    document.querySelectorAll(".minus-btn").classList.remove("disabled");
   }
   priceTotal();
 }
@@ -28,7 +28,9 @@ function minus() {
   valueCount--;
   document.getElementById("quantity").value = valueCount;
   if (valueCount == 1) {
-    document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+    document
+      .querySelectorAll(".minus-btn")
+      .setAttribute("disabled", "disabled");
   }
   priceTotal();
 }
